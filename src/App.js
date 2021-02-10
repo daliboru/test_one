@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { GithubContext } from './context/context';
+import React from 'react';
+
+import Data from './components/Data';
+import Footer from './components/Footer';
 
 function App() {
+  const { isLoading } = React.useContext(GithubContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {isLoading ? (
+        <div className='loading'>Loading...</div>
+      ) : (
+        <div className='App container page-container'>
+          <header className='header'>Gists</header>
+          <div className='content-wrap'>
+            <Data />
+          </div>
+          <Footer />
+        </div>
+      )}
+    </>
   );
 }
 
