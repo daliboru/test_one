@@ -526,7 +526,7 @@ hr {
   color: blue;
 }
 
-img.true {
+img.item-active {
   filter: brightness(60%);
 }
 
