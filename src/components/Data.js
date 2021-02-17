@@ -50,7 +50,7 @@ const Data = () => {
               <div className='one column'>
                 <img
                   data-id={id}
-                  className={id === activeId ? `item-active` : ''}
+                  className={id === activeId ? `${isItemActive}` : ''}
                   src={avatar_url}
                   alt='avatar'
                   style={{ height: '50px' }}
@@ -59,7 +59,9 @@ const Data = () => {
               <div
                 data-id={id}
                 className={
-                  id === activeId ? `ten columns item-active` : 'ten columns'
+                  id === activeId
+                    ? `ten columns ${isItemActive}`
+                    : 'ten columns'
                 }
               >
                 {file[0]}

@@ -522,11 +522,11 @@ hr {
   margin-bottom: 5px;
 }
 
-.item-active {
+.true {
   color: blue;
 }
 
-img.item-active {
+img.true {
   filter: brightness(60%);
 }
 
