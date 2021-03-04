@@ -11,7 +11,7 @@ const GithubProvider = ({ children }) => {
   const search30GithubGists = async () => {
     setIsLoading(true);
     const { data } = await axios(
-      `https://api.github.com/gists/public?pages=${pageNum}&per_page=30`
+      `https://api.github.com/gists/public?page=${pageNum}&per_page=30`
     ).catch((err) => console.error(err));
     setIsLoading(false);
     return data;
